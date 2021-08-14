@@ -74,7 +74,9 @@ export default {
 
 
 <style lang="scss" scoped>
-div {}
+div {
+    
+}
 header {
   height: 70px;
   display: flex;

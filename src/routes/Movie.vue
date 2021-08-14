@@ -227,6 +227,7 @@ export default {
     }
   }
 }
+
 // 스켈레톤 UI
 // .skeletons {
 //   display: flex;

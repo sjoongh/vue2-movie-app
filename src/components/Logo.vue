@@ -6,7 +6,7 @@
 </RouterLink>
 </template>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
 .logo {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
