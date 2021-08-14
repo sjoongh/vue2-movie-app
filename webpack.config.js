@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const { VueLoaderPlugin } = require('vue-loader')
+const DotEnv = require('dotenv-webpack')
+
 module.exports = {
   resolve: {
     extensions: ['.js', '.vue'],
@@ -28,6 +30,7 @@ module.exports = {
           'vue-style-loader',
           'style-loader',
           'css-loader',
+          'postcss-loader',
           {
             loader: 'sass-loader',
             options: {
@@ -50,13 +53,17 @@ module.exports = {
     new HtmlPlugin({
       template: './index.html'
     }),
-    // Static 폴더에 중요한 이미지들(자주 쓰이는)이미지 파일은 삽입해놓으면 좋음
-    // new CopyPlugin으로 static폴더의 이미지를 가져옴
+// Static 폴더에 중요한 이미지들(자주 쓰이는)이미지 파일은 삽입해놓으면 좋음
+// new CopyPlugin으로 static폴더의 이미지를 가져옴
     new CopyPlugin({
       patterns: [
         { from: 'static' }
       ]
     }),
-    new VueLoaderPlugin()
-  ]
+    new VueLoaderPlugin(),
+    new DotEnv()
+  ],
+  devServer: {
+    port: 8079
+  }
 }

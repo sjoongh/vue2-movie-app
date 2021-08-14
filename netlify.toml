@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  functions = "functions"
+  publish = "dist"
+
+[dev]
+  framework = "#custom"
+  # command로 target포트를 염
+  # package.json에서 바뀐 webpack명령어를 실행해줘야함
+  command = "npm run dev:webpack"
+  # targetPort는 안씀
+  targetPort = 8079
+  # 접속 포트
+  port = 8080
+  publish = "dist"
+  autoLaunch = false

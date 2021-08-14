@@ -7,6 +7,7 @@
 </template>
 
 <script>
+// import axios from 'axios'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
@@ -15,6 +16,16 @@ export default {
     Header,
     Footer
   },
+  // mounted() {
+  //   this.init()
+  // },
+  // methods: {
+  //   async init() {
+  //     // 사용자가 접속하는 로컬같은 주소가 자동으로 붙음 get에
+  //     const res = await axios.get('/.netlify/functions/movie')
+  //     console.log(res)
+  //   }
+  // }
 };
 </script>
 

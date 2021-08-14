@@ -1,3 +1,8 @@
+# dist는 npm실행될때 생성됨, 불필요하므로 막음
+# .env파일을 github에 올릴때 안올라가게 막음
+/dist
+.env
+
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,node
 

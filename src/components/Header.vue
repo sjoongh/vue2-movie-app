@@ -20,7 +20,7 @@
     class="user"
     @click="toAbout">
     <img
-        :src="name"
+        src="https://heropy.blog/css/images/logo.png"
         :alt="name" />
     </div>
 </header>
@@ -56,6 +56,9 @@ export default {
     computed: {
         myImage() {
             return this.$store.state.about.image
+        },
+        name () {
+            return this.$store.state.about.name
         }
     },
     methods: {
